@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHOICEAPP.SOURCE.SourceBank">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="clinicListView" ItemSelected="OnClinicSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Image Source="{Binding ClinicLogo}" WidthRequest="50" HeightRequest="50"/>
+                                <StackLayout>
+                                    <Label Text="{Binding Status}" />
+                                    <Label Text="{Binding ClinicName}" />
+                                    <Label Text="{Binding ClinicLocation}" />
+                                    <Label Text="{Binding ClinicDetails}" />
+                                    <!-- Add other labels for additional properties -->
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

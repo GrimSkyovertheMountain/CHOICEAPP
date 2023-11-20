@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHOICEAPP.DONEE.DoneePreference">
+    <ContentPage.Content>
+        <StackLayout Margin="10" Padding="20" >
+            <Label Text="S" 
+           VerticalOptions="Center" HorizontalOptions="Center"
+           FontSize="Large"/>
+            <Picker Title="Height"
+            x:Name="heightPicker">
+                <Picker.Items>
+                    <x:String>5' 0</x:String>
+                    <x:String>5' 1</x:String>
+                    <x:String>5' 2</x:String>
+                    <x:String>5' 3</x:String>
+                    <x:String>5' 4</x:String>
+                    <x:String>5' 5</x:String>
+                    <x:String>5' 6</x:String>
+                    <x:String>5' 7</x:String>
+                    <x:String>5' 8</x:String>
+                    <x:String>5' 9</x:String>
+                    <x:String>5' 10</x:String>
+                    <x:String>5' 11</x:String>
+                    <x:String>6' 0</x:String>
+                    <x:String>6' 1</x:String>
+                    <x:String>6' 2</x:String>
+                    <x:String>6' 3</x:String>
+                    <x:String>6' 4</x:String>
+                    <x:String>6' 5</x:String>
+                    <x:String>6' 6</x:String>
+                    <x:String>6' 7</x:String>
+                    <x:String>6' 8</x:String>
+                    <x:String>6' 9</x:String>
+                    <x:String>6' 10</x:String>
+                    <x:String>6' 11</x:String>
+                    <x:String>7' 0</x:String>
+                    <x:String>7' 1</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker Title="Weight"
+             x:Name="weightPicker">
+                <Picker.Items>
+                    <x:String>40 kg - 50 kg</x:String>
+                    <x:String>51 kg - 60 kg</x:String>
+                    <x:String>61 kg - 70 kg</x:String>
+                    <x:String>71 kg - 80 kg</x:String>
+                    <x:String>81 kg - 90 kg</x:String>
+                    <x:String>91 kg - 100 kg</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker Title="EyeColor"
+             x:Name="eyeColorPicker">
+                <Picker.Items>
+                    <x:String>Brown</x:String>
+                    <x:String>Black</x:String>
+                    <x:String>Hazel</x:String>
+                    <x:String>Green</x:String>
+                    <x:String>Blue</x:String>
+                    <x:String>Gray</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker Title="HairColor"
+             x:Name="hairColorPicker">
+                <Picker.Items>
+                    <x:String>Black</x:String>
+                    <x:String>Brown</x:String>
+                    <x:String>Dark Brown</x:String>
+                    <x:String>Light Brown</x:String>
+                    <x:String>Blonde</x:String>
+                    <x:String>Red</x:String>
+                    <x:String>Gray</x:String>
+                    <x:String>White</x:String>
+
+                </Picker.Items>
+            </Picker>
+            <Picker Title="SkinColor"
+             x:Name="skinColorPicker">
+                <Picker.Items>
+                    <x:String>Fair</x:String>
+                    <x:String>Light</x:String>
+                    <x:String>Olive</x:String>
+                    <x:String>Brown</x:String>
+                    <x:String>Dark Brown</x:String>
+                    <x:String>Black</x:String>
+
+                </Picker.Items>
+            </Picker>
+            <Picker 
+        x:Name="nationalityPicker"
+        Title="Nationality"
+        SelectedIndexChanged="OnNationalitySelectedIndexChanged"/>
+
+
+            <Picker x:Name="ethnicityPicker"
+        Title="Select Ethnicity"
+        IsEnabled="False" />
+
+            <Button Text="Submit" Clicked="OnSubmitButtonClicked"  VerticalOptions="Center"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

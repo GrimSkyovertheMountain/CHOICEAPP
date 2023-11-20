@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHOICEAPP.NOTIFICATION.Success_Reg"
+             BackgroundImageSource="Background.jpg">
+    <ContentPage.Content>
+        <Frame CornerRadius="20" Margin="50" Padding="0" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout  Padding="30" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10" >
+
+                <Frame Margin="5" 
+           BorderColor="Transparent"
+           HeightRequest="60"
+           WidthRequest="60"
+           HorizontalOptions="Center"
+           IsClippedToBounds="True"
+           VerticalOptions="Center">
+
+                    <Image Source="ok94.png"
+             Aspect="AspectFill"
+             Margin="-20"
+             HeightRequest="100"
+             WidthRequest="100" />
+
+                </Frame>
+                <Label Text="Success" FontSize="50" HorizontalOptions="Center" FontAttributes="Bold" TextColor="LawnGreen"/>
+                <Label Text="Thank you for Registering. Please check your email for the confirmation" FontSize="Body" HorizontalTextAlignment="Center"/>
+          
+        </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

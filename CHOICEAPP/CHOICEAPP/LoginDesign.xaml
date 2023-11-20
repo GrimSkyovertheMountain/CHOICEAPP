@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHOICEAPP.LoginDesign"
+             BackgroundImageSource="Background.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="ChoiceLogo.png" WidthRequest="280" HeightRequest="280"></Image>
+            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="White" PlaceholderColor="Gray" ></Entry>
+
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="White" PlaceholderColor="Gray" ></Entry>
+            <Button VerticalOptions="Center" Text="LOGIN" TextColor="White" BackgroundColor="Transparent" BorderWidth="1.5" CornerRadius="40"
+                    BorderColor="Orchid" Clicked="Button_Clicked"></Button>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an Account? " TextColor="DarkCyan" />
+                        <Span Text="Register" TextColor="DarkCyan"  FontAttributes="Bold" TextDecorations="Underline" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

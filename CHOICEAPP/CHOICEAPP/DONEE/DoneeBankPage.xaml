@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="CHOICEAPP.DoneeBankPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+
+            <!-- Top Buttons -->
+            <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <pancake:PancakeView Grid.Column="0" BackgroundColor="Transparent" HeightRequest="48" WidthRequest="50" CornerRadius="50" Margin="33.33" HorizontalOptions="Start">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TopButton1_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="MiniLogo.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+            </Grid>
+            <StackLayout Grid.Row="1" Padding="20">
+                <!-- Your main content goes here -->
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHOICEAPP.UserRegistration"
+             BackgroundImageSource="Background.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Button VerticalOptions="Center" Text="SOURCE" TextColor="CadetBlue" BackgroundColor="Transparent" BorderWidth="1" CornerRadius="40"
+        BorderColor="Orchid" Clicked="Button_Clicked"></Button>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Start your Journey in Spreading your seeds and helping future parents " TextColor="DarkCyan" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button VerticalOptions="Center" Text="DONEE" TextColor="CadetBlue" BackgroundColor="Transparent" BorderWidth="1" CornerRadius="40"
+BorderColor="Orchid" Clicked="Button_Clicked_1"></Button>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Do you Want to become a parent and looking for a Sperm Provider? " TextColor="DarkCyan" />
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+                </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

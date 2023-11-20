@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                mc:Ignorable="d"
+             xmlns:d="http:xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="CHOICEAPP.DoneeHomePage">
+    <ContentPage.Content>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <!-- Top Buttons -->
+            <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <pancake:PancakeView Grid.Column="0" BackgroundColor="Transparent" HeightRequest="48" WidthRequest="50" CornerRadius="50" Margin="33.33" HorizontalOptions="Start">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TopButton1_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="Profile100.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+
+                <pancake:PancakeView Grid.Column="1" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="60" Margin="33.33"  HorizontalOptions="Center">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TopButton2_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="MiniLogo.png" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" HeightRequest="100"/>
+                </pancake:PancakeView>
+                <pancake:PancakeView Grid.Column="2" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="60" Margin="33.33"  HorizontalOptions="End">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TopButton3_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="alerts100.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+            </Grid>
+
+            <!-- Main Content -->
+            <StackLayout Grid.Row="1" Padding="20">
+                <ListView x:Name="SourceList"> <!--selectedSource>-->
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Image Source="ChoiceLogo.png" WidthRequest="50" HeightRequest="50"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Status}" />
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="{Binding Height}" />
+                                        <Label Text="{Binding Weight}" />
+                                        <Label Text="{Binding EyeColor}" />
+                                        <Label Text="{Binding HairColor}" />
+                                        <Label Text="{Binding SkinColor}" />
+                                        <Label Text="{Binding Nationality}" />
+                                        <Label Text="{Binding Ethnicity}" />
+                                        <!-- Add other labels for additional properties -->
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+
+            <!-- Bottom Buttons -->
+            <Grid Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <pancake:PancakeView Grid.Column="0" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="60" Margin="33.33">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonBottom1_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="Bank100.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+                <pancake:PancakeView Grid.Column="1" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="60" Margin="33.33">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonBottom2_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="mainView100.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+                <pancake:PancakeView Grid.Column="2" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" CornerRadius="60" Margin="33.33">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonBottom3_Clicked"/>
+                    </pancake:PancakeView.GestureRecognizers>
+                    <Image Source="Bid100.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </pancake:PancakeView>
+            </Grid>
+        </Grid>
+                
+    </ContentPage.Content>
+</ContentPage>
